@@ -6,15 +6,28 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Page title</title>
 	<link rel="stylesheet" href="./sass/index.scss" />
-	<script type="module" src="./index.js"></script>
+
 </head>
 
 <body>
+	<form class="search-form" id="search-form">
+		<input class="search-form__input" type="text" name="searchQuery" autocomplete="off"
+			placeholder="Search images..." />
+		<button class="search-form__button" type="submit">
+			<img width="47px" src="/assets/search.svg" alt="">
+		</button>
+	</form>
+	<div class="wrapper">
 
 
+		<div class="gallery">
 
-	<!-- ❗️❗️❗️ Add partials like so for every page -->
-	<include src="./partials/example.html"></include>
+		</div>
+	</div>
+
+	<div class="js-pagination"></div>
+
+	<script type="module" src="./index.js"></script>
 </body>
 
 </html>
