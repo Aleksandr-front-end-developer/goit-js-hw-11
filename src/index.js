@@ -30,6 +30,8 @@ async function onSubmit(evt) {
 	try {
 		const arr = await fatchPixabay(inputValue)
 		if (arr.data.hits.length === 0) {
+			observer.unobserve(pagination);
+			gallary.innerHTML = '';
 			throw new Error(error)
 		}
 		Notiflix.Notify.success(`Hooray! We found ${arr.data.totalHits} images.`, {
